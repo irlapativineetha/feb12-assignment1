@@ -1,0 +1,29 @@
+com=int(650)
+soap=int(790)
+bis=int(50)
+cho=int(120)
+din=int(45)
+cname=input('Enter customer name:')
+cphno=input('Enter customer phone number:')
+comq=int(input('Enter no of comfort bottles:')) 
+soapq=int(input('Enter no of  soap packets:')) 
+bisq=int(input('Enter no of biscut packets:'))
+choq=int(input('Enter no of chocolates:')) 
+dinq=int(input('Enter no of dinner set:'))
+bill=(com*comq)+(soap*soapq)+(bis*bisq)+(cho*choq)+(din*dinq)
+if bill>5000:
+    dis=bill*10/100 
+    tax=0 
+if bill>=3000:
+    dis=bill*8/100 
+    tax=0 
+elif bill>=2000:
+    dis=bill*5/100
+    if bill>=1000:
+       dis=bill*3/100 
+    if bill>=3000:
+           tax=bill*10/100
+else:
+    tax=bill*18/100
+mainbill=bill-dis+tax 
+print('bill amount:',mainbill)
